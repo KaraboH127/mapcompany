@@ -15,7 +15,7 @@ export default function Footer() {
 
         {/* About */}
         <div>
-          <img src="../public/MAP-COMPANY-LOGO.png" alt="Map Company" className="h-11 object-contain mb-5 bg-white p-1" />
+          <img src="MAP-COMPANY-LOGO.png" alt="Map Company" className="h-11 object-contain mb-5 bg-white p-1" />
           <p className="text-[14px] text-[#888c96] leading-[1.8]">
             A trusted leader in architectural design, engineering, and project management —
             delivering innovative, precision-crafted solutions with excellence and integrity.

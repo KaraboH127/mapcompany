@@ -38,7 +38,7 @@ export default function ProjectManagement() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-14">
           {/* Project management photo */}
           <div className="overflow-hidden"> 
-            <img src="../public/project-management.jpg" alt="Project Management" className="w-full h-[400px] object-cover" /> 
+            <img src="project-management.jpg" alt="Project Management" className="w-full h-[400px] object-cover" /> 
           </div>
           <div>
             <p className="text-[#888c96] text-[16px] leading-[1.8]">

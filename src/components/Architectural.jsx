@@ -6,8 +6,8 @@ const PROJECTS = [
     description:
       'A perfect blend of modern design and lasting quality. Built to create comfort, style, and peace of mind.',
     images: [
-      { src: '../public/Riversdale-one.jpg', alt: 'Riversdale House exterior view 1' },
-      { src: '../public/Riversdale-two (1).jpg', alt: 'Riversdale House interior view 2' },
+      { src: 'Riversdale-one.jpg', alt: 'Riversdale House exterior view 1' },
+      { src: 'Riversdale-two (1).jpg', alt: 'Riversdale House interior view 2' },
     ],
   },
   {
@@ -15,8 +15,8 @@ const PROJECTS = [
     description:
       'A perfect blend of modern design and lasting quality. Built to create comfort, style, and peace of mind.',
     images: [
-      { src: '../public/Student-1.jpg', alt: 'Student Accommodation view 1' },
-      { src: '../public/Student-2.jpg', alt: 'Student Accommodation view 2' },
+      { src: 'Student-1.jpg', alt: 'Student Accommodation view 1' },
+      { src: 'student-2.jpg', alt: 'Student Accommodation view 2' },
     ],
   },
   {
@@ -24,8 +24,8 @@ const PROJECTS = [
     description:
       'A perfect blend of modern design and lasting quality. Built to create comfort, style, and peace of mind.',
     images: [
-      { src: '../public/Farm-house-1.jpg', alt: 'Farm House exterior view 1' },
-      { src: '../public/Farm-house-2.jpg', alt: 'Farm House interior view 2' },
+      { src: 'Farm-house-1.jpg', alt: 'Farm House exterior view 1' },
+      { src: 'Farm-house-2.jpg', alt: 'Farm House interior view 2' },
     ],
   },
 ];

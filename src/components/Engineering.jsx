@@ -5,24 +5,24 @@ const PROJECTS = [
     title: 'Pipeline One',
     description: 'A structural engineering project we delivered with precision and quality.',
     images: [
-      { src: '../public/Pipe-one.jpg', alt: 'Pipeline One view 1' },
-      { src: '../public/pipe-one(2).jpg', alt: 'Pipeline One view 2' },
+      { src: 'Pipe-one.jpg', alt: 'Pipeline One view 1' },
+      { src: 'pipe-one(2).jpg', alt: 'Pipeline One view 2' },
     ],
   },
   {
     title: 'Pipeline Two',
     description: 'A pipeline project successfully completed by our engineering team.',
     images: [
-      { src: '../public/pipe-two(1).jpg', alt: 'Pipeline Two view 1' },
-      { src: '../public/pipe-two(2).jpg', alt: 'Pipeline Two view 2' },
+      { src: 'pipe-two(1).jpg', alt: 'Pipeline Two view 1' },
+      { src: 'pipe-two(2).jpg', alt: 'Pipeline Two view 2' },
     ],
   },
   {
     title: 'Pipeline Three',
     description: 'Completed infrastructure project by our engineering department.',
     images: [
-      { src: '../public/pipe-three(1).jpg', alt: 'Pipeline Three view 1' },
-      { src: '../public/pipe-three(2).jpg', alt: 'Pipeline Three view 2' },
+      { src: 'pipe-three(1).jpg', alt: 'Pipeline Three view 1' },
+      { src: 'pipe-three(2).jpg', alt: 'Pipeline Three view 2' },
     ],
   },
 ];
