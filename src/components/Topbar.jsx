@@ -1,6 +1,6 @@
 export default function Topbar() {
   return (
-    <div className="bg-[#1a1c20] border-b border-[#2a2c30] px-10 py-2 flex items-center justify-between text-[13px] text-[#888c96]">
+    <div className="bg-[#1a1c20] border-b border-[#2a2c30] px-10 py-2 flex items-center justify-between text-[10px] text-[#888c96]">
       <div className="flex gap-6 items-center">
         <a
           href="tel:+27100231997"
