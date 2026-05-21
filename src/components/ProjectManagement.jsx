@@ -2,12 +2,12 @@ import ImagePlaceholder from './ImagePlaceholder';
 
 // ── Gallery placeholder slots (replace src with real image paths) ──
 const GALLERY_IMAGES = [
-  { src: '../public/project-gallery(1).jpg', alt: 'Project gallery 1' },
-  { src: '../public/project-gallery(2).jpg', alt: 'Project gallery 2' },
-  { src: '../public/project-gallery(3).jpg', alt: 'Project gallery 3' },
-  { src: '../public/project-gallery(4).jpg', alt: 'Project gallery 4' },
-  { src: '../public/project-gallery(5).jpg', alt: 'Project gallery 5' },
-  { src: '../public/project-gallery(6).jpg', alt: 'Project gallery 6' },
+  { src: 'project-gallery(1).jpg', alt: 'Project gallery 1' },
+  { src: 'project-gallery(2).jpg', alt: 'Project gallery 2' },
+  { src: 'project-gallery(3).jpg', alt: 'Project gallery 3' },
+  { src: 'project-gallery(4).jpg', alt: 'Project gallery 4' },
+  { src: 'project-gallery(5).jpg', alt: 'Project gallery 5' },
+  { src: 'project-gallery(6).jpg', alt: 'Project gallery 6' },
 ];
 
 const ACCREDITATIONS = [
