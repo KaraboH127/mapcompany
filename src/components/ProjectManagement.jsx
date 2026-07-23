@@ -37,8 +37,16 @@ export default function ProjectManagement() {
         {/* Intro grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-14">
           {/* Project management photo */}
-          <div className="overflow-hidden"> 
-            <img src="project-management.jpg" alt="Project Management" className="w-full h-[400px] object-cover" /> 
+          <div className="overflow-hidden">
+            <img
+              src="project-management.jpg"
+              alt="Project management team coordinating delivery on a project site"
+              width="800"
+              height="400"
+              loading="lazy"
+              decoding="async"
+              className="w-full h-[400px] object-cover"
+            />
           </div>
           <div>
             <p className="text-[#888c96] text-[16px] leading-[1.8]">
@@ -112,6 +120,8 @@ export default function ProjectManagement() {
               <ImagePlaceholder
                 src={img.src}
                 alt={img.alt}
+                width={800}
+                height={600}
                 aspectRatio="aspect-[4/3]"
                 className="transition-transform duration-400 hover:scale-[1.04]"
               />

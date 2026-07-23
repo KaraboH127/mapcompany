@@ -12,9 +12,11 @@ import Footer from './components/Footer';
 export default function App() {
   return (
     <>
-      <Topbar />
-      <Navbar />
-      <main>
+      <header aria-label="Site header">
+        <Topbar />
+        <Navbar />
+      </header>
+      <main id="main-content">
         <Hero />
         <CompanyProfile />
         <Architectural />

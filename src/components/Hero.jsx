@@ -9,7 +9,16 @@ export default function Hero() {
     >
       {/* Background image — replace ImagePlaceholder with <img> once you have the asset */}
       <div className="absolute inset-0 z-0">
-        <img src="Riversdale-one.jpg" alt="" className="w-full h-full object-cover opacity-35" />
+        <img
+          src="Riversdale-one.jpg"
+          alt="Modern architectural exterior with warm lighting and premium finishes"
+          width="1600"
+          height="900"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
+          className="w-full h-full object-cover opacity-35"
+        />
         <div className="w-full h-full bg-[#22252b] opacity-60" />
       </div>
 

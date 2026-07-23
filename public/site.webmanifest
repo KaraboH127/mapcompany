@@ -1,0 +1,17 @@
+{
+  "name": "Map Company",
+  "short_name": "Map Company",
+  "description": "Architectural, engineering, and project management services across South Africa.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d0f12",
+  "theme_color": "#0d0f12",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

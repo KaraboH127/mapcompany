@@ -76,7 +76,15 @@ export default function Engineering() {
 
           {/* Engineering team photo placeholder */}
           <div className="overflow-hidden">
-            <img src="engineering-three-people-discussing-plan-factory.jpg" alt="Engineering Team" className="w-full h-[400px] object-cover" />
+            <img
+              src="engineering-three-people-discussing-plan-factory.jpg"
+              alt="Engineering team reviewing plans at a construction site"
+              width="800"
+              height="400"
+              loading="lazy"
+              decoding="async"
+              className="w-full h-[400px] object-cover"
+            />
           </div>
         </div>
 

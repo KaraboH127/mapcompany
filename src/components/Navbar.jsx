@@ -38,9 +38,17 @@ export default function Navbar() {
   return (
     <>
       {/* ── Desktop Navbar ── */}
-      <nav className="bg-white border-b border-[#2a2c30] px-10 flex items-center justify-between sticky top-0 z-[1000] h-[72px]">
-        <a href="#home">
-          <img src="MAP-COMPANY-LOGO.png" alt="Map Company Logo" className="h-[52px] object-contain" /> 
+      <nav aria-label="Primary" className="bg-white border-b border-[#2a2c30] px-10 flex items-center justify-between sticky top-0 z-[1000] h-[72px]">
+        <a href="#home" aria-label="Map Company home">
+          <img
+            src="MAP-COMPANY-LOGO.png"
+            alt="Map Company logo"
+            width="180"
+            height="52"
+            loading="lazy"
+            decoding="async"
+            className="h-[52px] object-contain"
+          />
         </a>
 
         <ul className="hidden lg:flex gap-1 list-none">
@@ -104,7 +112,15 @@ export default function Navbar() {
       >
         {/* Header */}
         <div className="flex items-center justify-between px-7 py-5 border-b border-[#2a2c30]">
-          <img src="MAP-COMPANY-LOGO.png" alt="Map Company Logo" className="h-[52px] object-contain" /> 
+          <img
+            src="MAP-COMPANY-LOGO.png"
+            alt="Map Company logo"
+            width="180"
+            height="52"
+            loading="lazy"
+            decoding="async"
+            className="h-[52px] object-contain"
+          />
           <button
             onClick={close}
             className="text-[#888c96] text-[22px] cursor-pointer bg-transparent border-none hover:text-[#c9a84c] transition-colors"

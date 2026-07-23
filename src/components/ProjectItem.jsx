@@ -22,6 +22,8 @@ export default function ProjectItem({ num, title, description, images = [], flip
             <ImagePlaceholder
               src={img.src}
               alt={img.alt}
+              width={800}
+              height={600}
               aspectRatio="aspect-[4/3]"
               className="transition-transform duration-400 hover:scale-[1.03]"
             />

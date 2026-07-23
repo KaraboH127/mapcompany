@@ -8,12 +8,20 @@ export default function ImagePlaceholder({
   alt = '',
   className = '',
   aspectRatio = 'aspect-[4/3]',
+  width,
+  height,
+  loading = 'lazy',
+  decoding = 'async',
 }) {
   if (src) {
     return (
       <img
         src={src}
         alt={alt}
+        width={width}
+        height={height}
+        loading={loading}
+        decoding={decoding}
         className={`w-full object-cover block ${aspectRatio} ${className}`}
       />
     );
