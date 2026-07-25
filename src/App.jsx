@@ -11,6 +11,9 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import NotFoundPage from './components/NotFoundPage';
 
+// Map of pathname (or hash fragment) to the corresponding section id used for scrolling.
+// The keys are plain paths (e.g., "/architectural") but we also treat hash fragments like "#architectural"
+// as equivalent by normalizing them in `resolveRoute`.
 const ROUTE_MAP = {
   '/': 'home',
   '/home': 'home',
@@ -24,9 +27,22 @@ const ROUTE_MAP = {
   '/contact': 'contact',
 };
 
-function resolveRoute(pathname) {
-  const normalized = pathname.replace(/\/+$/, '') || '/';
-  return ROUTE_MAP[normalized] ?? null;
+/**
+ * Resolve the current location to a known route.
+ * Supports both pathname (e.g., "/architectural") and hash fragments (e.g., "#architectural").
+ */
+function resolveRoute() {
+  // Prefer pathname when it maps to a route.
+  const path = window.location.pathname.replace(/\/+$/, '') || '/';
+  if (ROUTE_MAP[path]) return ROUTE_MAP[path];
+
+  // Fallback to hash fragment (remove leading #) and treat it as a pathname.
+  const hash = window.location.hash.replace(/^#/, '');
+  if (hash) {
+    const hashPath = `/${hash}`;
+    return ROUTE_MAP[hashPath] ?? null;
+  }
+  return null;
 }
 
 function navigateTo(path) {
@@ -35,11 +51,11 @@ function navigateTo(path) {
 }
 
 export default function App() {
-  const [route, setRoute] = useState(() => resolveRoute(window.location.pathname));
+  const [route, setRoute] = useState(() => resolveRoute());
 
   useEffect(() => {
     const syncRoute = () => {
-      const nextRoute = resolveRoute(window.location.pathname);
+      const nextRoute = resolveRoute();
       setRoute(nextRoute);
 
       if (nextRoute) {
@@ -53,9 +69,14 @@ export default function App() {
       }
     };
 
+    // Initial sync and listen to both history navigation and hash changes.
     syncRoute();
     window.addEventListener('popstate', syncRoute);
-    return () => window.removeEventListener('popstate', syncRoute);
+    window.addEventListener('hashchange', syncRoute);
+    return () => {
+      window.removeEventListener('popstate', syncRoute);
+      window.removeEventListener('hashchange', syncRoute);
+    };
   }, []);
 
   if (!route) {
@@ -81,3 +102,4 @@ export default function App() {
     </>
   );
 }
+
