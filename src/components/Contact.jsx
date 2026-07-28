@@ -62,6 +62,27 @@ export default function Contact() {
               </p>
             </ContactBlock>
 
+            <ContactBlock title="Phalaborwa Trade Test Centre Branch">
+              <p className="text-[15px] text-[#d4d6da] leading-[1.7]">
+                4446 Nelson Mandela <br />
+                Phalaborwa 1390 <br />
+                <a href="tel:0150230795" className="hover:text-[#c9a84c] transition-colors">
+                  Tel: 015 023 0795
+                </a>{' '}
+                |{' '}
+                <a href="tel:0760825713" className="hover:text-[#c9a84c] transition-colors">
+                  076 082 5713
+                </a>
+                <br />
+                <a
+                  href="mailto:phalaborwa@mapcompany.co.za"
+                  className="hover:text-[#c9a84c] transition-colors"
+                >
+                  phalaborwa@mapcompany.co.za
+                </a>
+              </p>
+            </ContactBlock>
+
             <ContactBlock title="Working Hours">
               <ul className="list-none text-[15px]">
                 {[

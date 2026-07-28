@@ -83,6 +83,21 @@ export default function Footer() {
             >
               durban@mapcompany.co.za
             </a>
+
+            <br />
+            <br />
+            <strong className="text-[#c9a84c]">Phalaborwa Trade Test Centre Branch </strong>
+            <br />
+            4446 Nelson Mandela, Phalaborwa 1390 
+            <br />
+            Tel: 015 023 0795 | 076 082 5713
+            <br />
+            <a
+              href="mailto:phalaborwa@mapcompany.co.za"
+              className="text-[#888c96] no-underline hover:text-[#c9a84c] transition-colors"
+            >
+              phalaborwa@mapcompany.co.za
+            </a>
           </p>
         </div>
       </div>
