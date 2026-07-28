@@ -1,31 +1,17 @@
-import Topbar from './components/Topbar';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import CompanyProfile from './components/CompanyProfile';
-import Architectural from './components/Architectural';
-import Engineering from './components/Engineering';
-import ProjectManagement from './components/ProjectManagement';
-import WhyChooseUs from './components/WhyChooseUs';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import { Routes, Route } from 'react-router-dom';
+import MainLayout from './layouts/MainLayout';
+import HomePage from './pages/HomePage';
+import TradeTestCentre from './pages/TradeTestCentre';
+import NotFound from './pages/NotFound';
 
 export default function App() {
   return (
-    <>
-      <header aria-label="Site header">
-        <Topbar />
-        <Navbar />
-      </header>
-      <main id="main-content">
-        <Hero />
-        <CompanyProfile />
-        <Architectural />
-        <Engineering />
-        <ProjectManagement />
-        <WhyChooseUs />
-        <Contact />
-      </main>
-      <Footer />
-    </>
+    <Routes>
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/trade-test-centre" element={<TradeTestCentre />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
   );
 }

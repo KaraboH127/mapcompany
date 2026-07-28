@@ -1,11 +1,14 @@
+import { Link } from 'react-router-dom';
+
 const NAV_LINKS = [
-  { label: 'Home', href: '#home' },
-  { label: 'Company', href: '#company-profile' },
-  { label: 'Architectural', href: '#architectural' },
-  { label: 'Engineering', href: '#engineering' },
-  { label: 'Project Management', href: '#project-management' },
-  { label: 'Why Choose Us', href: '#why-choose-us' },
-  { label: 'Contact Us', href: '#contact' },
+  { label: 'Home', href: '/#home' },
+  { label: 'Company', href: '/#company-profile' },
+  { label: 'Architectural', href: '/#architectural' },
+  { label: 'Engineering', href: '/#engineering' },
+  { label: 'Project Management', href: '/#project-management' },
+  { label: 'Trade Test Centre', href: '/trade-test-centre' },
+  { label: 'Why Choose Us', href: '/#why-choose-us' },
+  { label: 'Contact Us', href: '/#contact' },
 ];
 
 export default function Footer() {
@@ -38,12 +41,12 @@ export default function Footer() {
           <ul className="list-none space-y-2.5">
             {NAV_LINKS.map(({ label, href }) => (
               <li key={href}>
-                <a
-                  href={href}
+                <Link
+                  to={href}
                   className="text-[#888c96] text-[14px] no-underline hover:text-[#c9a84c] transition-colors"
                 >
                   {label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

@@ -1,21 +1,27 @@
 import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const NAV_LINKS = [
-  { label: 'Home', href: '#home' },
-  { label: 'Company', href: '#company-profile' },
-  { label: 'Architectural', href: '#architectural' },
-  { label: 'Engineering', href: '#engineering' },
-  { label: 'Project Management', href: '#project-management' },
-  { label: 'Why Us', href: '#why-choose-us' },
-  { label: 'Contact Us', href: '#contact' },
+  { label: 'Home', href: '/#home' },
+  { label: 'Company', href: '/#company-profile' },
+  { label: 'Architectural', href: '/#architectural' },
+  { label: 'Engineering', href: '/#engineering' },
+  { label: 'Project Management', href: '/#project-management' },
+  { label: 'Trade Test Centre', href: '/trade-test-centre' },
+  { label: 'Why Us', href: '/#why-choose-us' },
+  { label: 'Contact Us', href: '/#contact' },
 ];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const { pathname } = useLocation();
 
   useEffect(() => {
+    if (pathname !== '/') return; // only the homepage has scrollable sections
     const sections = document.querySelectorAll('section[id]');
+    if (sections.length === 0) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
@@ -26,7 +32,7 @@ export default function Navbar() {
     );
     sections.forEach((s) => observer.observe(s));
     return () => observer.disconnect();
-  }, []);
+  }, [pathname]);
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
@@ -39,7 +45,7 @@ export default function Navbar() {
     <>
       {/* ── Desktop Navbar ── */}
       <nav aria-label="Primary" className="bg-white border-b border-[#2a2c30] px-10 flex items-center justify-between sticky top-0 z-[1000] h-[72px]">
-        <a href="#home" aria-label="Map Company home">
+        <Link to="/" aria-label="Map Company home">
           <img
             src="MAP-COMPANY-LOGO.png"
             alt="Map Company logo"
@@ -49,16 +55,18 @@ export default function Navbar() {
             decoding="async"
             className="h-[52px] object-contain"
           />
-        </a>
+        </Link>
 
         <ul className="hidden lg:flex gap-1 list-none">
           {NAV_LINKS.map(({ label, href }) => {
-            const id = href.replace('#', '');
-            const isActive = activeSection === id;
+            const id = href.includes('#') ? href.split('#')[1] : '';
+            const isActive = href.includes('#')
+              ? pathname === '/' && activeSection === id
+              : pathname === href;
             return (
               <li key={href}>
-                <a
-                  href={href}
+                <Link
+                  to={href}
                   className={`block px-[18px] py-2 text-[13px] font-medium tracking-[0.04em] uppercase border-b-2 transition-colors duration-200 ${
                     isActive
                       ? 'text-[#c9a84c] border-[#c9a84c]'
@@ -66,7 +74,7 @@ export default function Navbar() {
                   }`}
                 >
                   {label}
-                </a>
+                </Link>
               </li>
             );
           })}
@@ -133,8 +141,10 @@ export default function Navbar() {
         {/* Links */}
         <ul className="list-none flex-1 py-4 overflow-y-auto">
           {NAV_LINKS.map(({ label, href }, i) => {
-            const id = href.replace('#', '');
-            const isActive = activeSection === id;
+            const id = href.includes('#') ? href.split('#')[1] : '';
+            const isActive = href.includes('#')
+              ? pathname === '/' && activeSection === id
+              : pathname === href;
             return (
               <li
                 key={href}
@@ -145,8 +155,8 @@ export default function Navbar() {
                   transition: `opacity 0.35s ease ${0.08 + i * 0.06}s, transform 0.35s ease ${0.08 + i * 0.06}s`,
                 }}
               >
-                <a
-                  href={href}
+                <Link
+                  to={href}
                   onClick={close}
                   className={`flex items-center justify-between px-7 py-[18px] font-condensed text-[18px] font-semibold tracking-[0.1em] uppercase transition-all duration-200 ${
                     isActive
@@ -156,7 +166,7 @@ export default function Navbar() {
                 >
                   {label}
                   <span className="text-[#c9a84c] text-sm">→</span>
-                </a>
+                </Link>
               </li>
             );
           })}
