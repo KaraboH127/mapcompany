@@ -41,27 +41,6 @@ export default function Contact() {
               </p>
             </ContactBlock>
 
-            <ContactBlock title="Durban Branch">
-              <p className="text-[15px] text-[#d4d6da] leading-[1.7]">
-                Erf 10233 Monaco Drive<br />
-                Hyde Park Coastal, Estate, 4480<br />
-                <a href="tel:0320610500" className="hover:text-[#c9a84c] transition-colors">
-                  Tel: 032 061 0500
-                </a>{' '}
-                |{' '}
-                <a href="tel:0845417929" className="hover:text-[#c9a84c] transition-colors">
-                  084 541 7929
-                </a>
-                <br />
-                <a
-                  href="mailto:durban@mapcompany.co.za"
-                  className="hover:text-[#c9a84c] transition-colors"
-                >
-                  durban@mapcompany.co.za
-                </a>
-              </p>
-            </ContactBlock>
-
             <ContactBlock title="Phalaborwa Trade Test Centre Branch">
               <p className="text-[15px] text-[#d4d6da] leading-[1.7]">
                 4446 Nelson Mandela <br />

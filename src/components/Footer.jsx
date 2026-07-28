@@ -71,21 +71,6 @@ export default function Footer() {
             </a>
             <br />
             <br />
-            <strong className="text-[#c9a84c]">Durban Branch</strong>
-            <br />
-            Erf 10233 Monaco Drive, Hyde Park Coastal, 4480
-            <br />
-            Tel: 032 061 0500 | 084 541 7929
-            <br />
-            <a
-              href="mailto:durban@mapcompany.co.za"
-              className="text-[#888c96] no-underline hover:text-[#c9a84c] transition-colors"
-            >
-              durban@mapcompany.co.za
-            </a>
-
-            <br />
-            <br />
             <strong className="text-[#c9a84c]">Phalaborwa Trade Test Centre Branch </strong>
             <br />
             4446 Nelson Mandela, Phalaborwa 1390 
